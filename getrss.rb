@@ -1,7 +1,7 @@
 require 'rss'
 require 'pp'
 require './wfp_setting'
-require 'time'
+require './wfp_common'
 
 ## getrss.rb
 #はてなブログの/rssはRSS2.0を返すとのこと
@@ -16,12 +16,6 @@ def getPicSrc(description)
   end
   return nil
 end
-
-#保存ファイル名を求める
-#def getFileName
-#  t = Time.now
-#  r = "wfp" + t.strftime("%Y%m%d") + ".yaml"
-#end
 
 uri = RSS_URI
 rss = RSS::Parser.parse(uri)
