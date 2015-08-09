@@ -7,6 +7,11 @@ def getYamlFileName
   r = "wfp" + t.strftime("%Y%m%d") + ".yaml"
 end
 
+def getJsonFileName
+  f = FILE_JSON
+  return f;
+end
+
 def rewriteDairy(src, dairy)
   io = open(src, 'w')
   YAML.dump(dairy, io)
@@ -25,4 +30,3 @@ def readJson(src)
   end
   return json_data
 end
-
