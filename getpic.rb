@@ -5,9 +5,9 @@ require 'open-uri'
 require 'fileutils'
 
 def getPicSaveFile(uri)
-  if %r|http://(.*)/wzm/(.*)$| =~ uri
+  if %r|http://(.*)/wzm/(.*)/(.*)$| =~ uri
     #Hatena fotolife
-    return "./pic/" + $2
+    return "./pic/" + $3
   elsif %r|https://instagram.com/p/(.*)/media/(.*)$| =~ uri
     #instagram
     return "./pic/" + $1 + ".jpg"

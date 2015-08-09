@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'time'
 require 'yaml'
 require 'json'
