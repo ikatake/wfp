@@ -1,4 +1,6 @@
 #!/bin/bash
+export GEM_HOME="/home/ikatake/local/lib/ruby/gem"
+
 cd $(cd $(dirname $0);pwd)
 ymd=`date '+%Y%m%d'`
 oldir=./old/${ymd}
